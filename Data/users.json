@@ -5,6 +5,7 @@
             "lastName": "Asis",
             "username": "eliyahuasis",
             "age": 23,
+            "city":"Netanya",
             "email": "eliyahu123@gmail.com",
             "password": "eli123",
             "posts": [
@@ -65,6 +66,7 @@
             "lastName": "Sharabi",
             "username": "sageesharabi",
             "age": 26,
+            "city":"Tel-aviv",
             "email": "sagee123@gmail.com",
             "password": "sagee123",
             "posts": [
@@ -125,6 +127,7 @@
             "lastName": "kom",
             "username": "shirankom",
             "age": 29,
+            "city":"Heifa",
             "email": "shiran123@gmail.com",
             "password": "shiran23",
             "posts": [

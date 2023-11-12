@@ -1,0 +1,50 @@
+#navigationBar {
+    background-color: #4267B2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 200vh;
+}
+
+#profileBtn {
+    float: left;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vh;
+    margin-left: 5vh;
+    margin-top: 3vh;
+}
+
+#logoutBtn {
+    float: right;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vh;
+    margin-right: 5vh;
+    margin-top: 3vh;
+}
+
+#createPostDiv {
+    margin-top: 12vh;
+    border: 2px solid #4267B2;
+    align-items: center;
+    width: fit-content;
+    text-align: center;
+    margin-left: 70vh;
+}
+
+#newPostContent {
+    width: 50vh;
+    height: 10vh;
+}
+#clearNewPostContent{
+    width: 10vh;
+    height: 3vh;
+}
+#shareNewPost{
+    width: 10vh;
+    height: 3vh;
+    float: right;
+    margin-right: 1vh;
+}
