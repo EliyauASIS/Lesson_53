@@ -1,0 +1,184 @@
+{
+    "users": [
+        {
+            "firstName": "Eliyahu",
+            "lastName": "Asis",
+            "username": "eliyahuasis",
+            "age": 23,
+            "email": "eliyahu123@gmail.com",
+            "password": "eli123",
+            "posts": [
+                {
+                    "postNumber": 1,
+                    "postContent": "post 1",
+                    "postLikes": 1,
+                    "postComments": [
+                        {
+                            "commentNumber": 1,
+                            "postContent": "comment 1"
+                        },
+                        {
+                            "commentNumber": 2,
+                            "postContent": "comment 2"
+                        }
+                    ]
+                },
+                {
+                    "postNumber": 2,
+                    "postContent": "post 2",
+                    "postLikes": 1,
+                    "postComments": [
+                        {
+                            "commentNumber": 1,
+                            "postContent": "comment 1"
+                        }
+                    ]
+                },
+                {
+                    "postNumber": 3,
+                    "postContent": "post 3",
+                    "postLikes": 1,
+                    "postComments": [
+                        {
+                            "commentNumber": 1,
+                            "postContent": "comment 1"
+                        },
+                        {
+                            "commentNumber": 2,
+                            "postContent": "comment 2"
+                        },
+                        {
+                            "commentNumber": 3,
+                            "postContent": "comment 3"
+                        }
+                    ]
+                }
+            ],
+            "friends": [
+                {
+                    "username": "sageesharabi"
+                }
+            ]
+        },
+        {
+            "firstName": "Sagee",
+            "lastName": "Sharabi",
+            "username": "sageesharabi",
+            "age": 26,
+            "email": "sagee123@gmail.com",
+            "password": "sagee123",
+            "posts": [
+                {
+                    "postNumber": 1,
+                    "postContent": "post 1",
+                    "postLikes": 1,
+                    "postComments": [
+                        {
+                            "commentNumber": 1,
+                            "postContent": "comment 1"
+                        },
+                        {
+                            "commentNumber": 2,
+                            "postContent": "comment 2"
+                        }
+                    ]
+                },
+                {
+                    "postNumber": 2,
+                    "postContent": "post 2",
+                    "postLikes": 1,
+                    "postComments": [
+                        {
+                            "commentNumber": 1,
+                            "postContent": "comment 1"
+                        }
+                    ]
+                },
+                {
+                    "postNumber": 3,
+                    "postContent": "post 3",
+                    "postLikes": 1,
+                    "postComments": [
+                        {
+                            "commentNumber": 1,
+                            "postContent": "comment 1"
+                        },
+                        {
+                            "commentNumber": 2,
+                            "postContent": "comment 2"
+                        },
+                        {
+                            "commentNumber": 3,
+                            "postContent": "comment 3"
+                        }
+                    ]
+                }
+            ],
+            "friends": [
+                {
+                    "username": "eliyahuasis"
+                }
+            ]
+        },
+        {
+            "firstName": "Shiran",
+            "lastName": "kom",
+            "username": "shirankom",
+            "age": 29,
+            "email": "shiran123@gmail.com",
+            "password": "shiran23",
+            "posts": [
+                {
+                    "postNumber": 1,
+                    "postContent": "post 1",
+                    "postLikes": 1,
+                    "postComments": [
+                        {
+                            "commentNumber": 1,
+                            "postContent": "comment 1"
+                        },
+                        {
+                            "commentNumber": 2,
+                            "postContent": "comment 2"
+                        }
+                    ]
+                },
+                {
+                    "postNumber": 2,
+                    "postContent": "post 2",
+                    "postLikes": 1,
+                    "postComments": [
+                        {
+                            "commentNumber": 1,
+                            "postContent": "comment 1"
+                        }
+                    ]
+                },
+                {
+                    "postNumber": 3,
+                    "postContent": "post 3",
+                    "postLikes": 1,
+                    "postComments": [
+                        {
+                            "commentNumber": 1,
+                            "postContent": "comment 1"
+                        },
+                        {
+                            "commentNumber": 2,
+                            "postContent": "comment 2"
+                        },
+                        {
+                            "commentNumber": 3,
+                            "postContent": "comment 3"
+                        }
+                    ]
+                }
+            ],
+            "friends": [
+                {
+                    "username": "eliyahuasis"
+                }
+            ]
+        }
+    ]
+}
