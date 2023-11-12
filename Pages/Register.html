@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/Register.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="main-container">
+    <div id="container">
+        <div>
+            <div><label for="firstName">FirstName</label></div>
+            <div><input type="text" id="firstName"  placeholder="firstName"></div>
+
+
+            <div><label for="lastName">lastName</label></div>
+            <div><input type="text" id="lastName"  placeholder="lastName"></div>
+
+            <div><label for="username">Username</label></div>
+            <div><input type="text" id="username"  placeholder="username"></div>
+
+            <div><label for="age">age</label></div>
+            <div><input type="text" id="age"  placeholder="age"></div>
+           
+
+            <div></div><label for="email">Email</label>
+            <div><input type="email" id="email" placeholder="email@email.com"></div>
+
+            <div><label for="password">Password</label></div>
+            <div><input type="password" id="password" placeholder=""></div>
+
+        </div>
+        <div class="btndiv">
+            <button id="logbtn" onclick="userSubmition(firstName.value,lastName.value,username.value,age.value,email.value,password.value)">Sign Up</button>
+        </div>
+        <div id="underHint"></div>
+    </div>
+    </div>
+</div>
+</body>
+<script src="../Scripts/Register.js"></script>
+
+</html>
