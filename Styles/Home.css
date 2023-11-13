@@ -14,6 +14,7 @@
     font-size: 2.5vh;
     margin-left: 5vh;
     margin-top: 3vh;
+    
 }
 
 #logoutBtn {
@@ -24,27 +25,81 @@
     margin-right: 5vh;
     margin-top: 3vh;
 }
+#posts{
+    width: fit-content;
+}
 
 #createPostDiv {
     margin-top: 12vh;
     border: 2px solid #4267B2;
+    background-color: #898F9C;
     align-items: center;
-    width: fit-content;
+    width: 60vh;
     text-align: center;
     margin-left: 70vh;
+    height: 18vh;
+    border-radius: 1vh;
 }
 
 #newPostContent {
     width: 50vh;
-    height: 10vh;
+    height: 10vh; 
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    border-radius: 1vh;
 }
 #clearNewPostContent{
     width: 10vh;
     height: 3vh;
+    float: left;
+    border-radius: 1vh;
+    margin-left: 1vh;
+    font-size: 150%;
 }
 #shareNewPost{
     width: 10vh;
     height: 3vh;
     float: right;
     margin-right: 1vh;
+    font-size: 150%;
+    color: white;
+    background-color: #4267B2;
+    border-radius: 1vh;
+}
+
+#explorerPosts{
+    text-align: center;
+}
+.post{
+    align-items: center;
+    background-color: rgb(198, 198, 198);
+    margin-bottom: 3vh;
+    width: 50vh;
+    height:90vh;
+    
+}
+.postCreatorName{
+    float: left;
+    margin-left: 7vh;
+    margin-top: 2vh;
+    font-size: 3vh;
+    font-weight: bold;
+}
+.postImage{
+    margin-top: 4vh;
+    height: 48vh;
+    width: 48vh;
+}
+.likeBtn{
+   display: none;
+}
+.likeLabel{
+    font-size: 5vh;
+}
+.comment{
+    align-items: center;
+    background-color: white;
+    width: 49vh;
+    height: 7vh;
+    text-align: center;
 }

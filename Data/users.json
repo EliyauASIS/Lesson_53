@@ -5,52 +5,65 @@
             "lastName": "Asis",
             "username": "eliyahuasis",
             "age": 23,
-            "city":"Netanya",
+            "city": "Netanya",
             "email": "eliyahu123@gmail.com",
             "password": "eli123",
             "posts": [
                 {
+                    "postCreator": "eliyahuasis",
                     "postNumber": 1,
+                    "postImage":"../Media/picture1.jpg",
                     "postContent": "post 1",
-                    "postLikes": 1,
+                    "postLikes": 457,
+                    "liked":false,
                     "postComments": [
                         {
                             "commentNumber": 1,
-                            "postContent": "comment 1"
+                            "commentContent": "post 1 comment 1"
                         },
                         {
                             "commentNumber": 2,
-                            "postContent": "comment 2"
+                            "commentContent": "post 1 comment 2"
                         }
                     ]
                 },
                 {
+                    "postCreator": "eliyahuasis",
                     "postNumber": 2,
+                    "postImage":"../Media/picture2.jpg",
                     "postContent": "post 2",
-                    "postLikes": 1,
+                    "postLikes": 577,
+                    "liked":false,
                     "postComments": [
                         {
                             "commentNumber": 1,
-                            "postContent": "comment 1"
+                            "commentContent": "post 2 comment 1"
+                        },
+                        {
+                            "commentNumber": 2,
+                            "commentContent": "post 2 comment 2"
                         }
                     ]
                 },
                 {
+                    "postCreator": "eliyahuasis",
                     "postNumber": 3,
+                    "postImage":"../Media/picture3.jpg",
                     "postContent": "post 3",
-                    "postLikes": 1,
+                    "postLikes": 1654,
+                    "liked":false,
                     "postComments": [
                         {
                             "commentNumber": 1,
-                            "postContent": "comment 1"
+                            "commentContent": "post 3 comment 1"
                         },
                         {
                             "commentNumber": 2,
-                            "postContent": "comment 2"
+                            "commentContent": "post 3 comment 2"
                         },
                         {
                             "commentNumber": 3,
-                            "postContent": "comment 3"
+                            "commentContent": "post 3 comment 3"
                         }
                     ]
                 }
@@ -66,11 +79,12 @@
             "lastName": "Sharabi",
             "username": "sageesharabi",
             "age": 26,
-            "city":"Tel-aviv",
+            "city": "Tel-aviv",
             "email": "sagee123@gmail.com",
             "password": "sagee123",
             "posts": [
                 {
+                    "postCreator": "sageesharabi",
                     "postNumber": 1,
                     "postContent": "post 1",
                     "postLikes": 1,
@@ -86,6 +100,7 @@
                     ]
                 },
                 {
+                    "postCreator": "sageesharabi",
                     "postNumber": 2,
                     "postContent": "post 2",
                     "postLikes": 1,
@@ -97,6 +112,7 @@
                     ]
                 },
                 {
+                    "postCreator": "sageesharabi",
                     "postNumber": 3,
                     "postContent": "post 3",
                     "postLikes": 1,
@@ -127,11 +143,12 @@
             "lastName": "kom",
             "username": "shirankom",
             "age": 29,
-            "city":"Heifa",
+            "city": "Heifa",
             "email": "shiran123@gmail.com",
             "password": "shiran23",
             "posts": [
                 {
+                    "postCreator": "shirankom",
                     "postNumber": 1,
                     "postContent": "post 1",
                     "postLikes": 1,
@@ -147,6 +164,7 @@
                     ]
                 },
                 {
+                    "postCreator": "shirankom",
                     "postNumber": 2,
                     "postContent": "post 2",
                     "postLikes": 1,
@@ -158,6 +176,7 @@
                     ]
                 },
                 {
+                    "postCreator": "shirankom",
                     "postNumber": 3,
                     "postContent": "post 3",
                     "postLikes": 1,
