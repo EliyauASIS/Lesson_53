@@ -17,6 +17,6 @@ void function login()
     } 
     else if (username.value==usersData.username && password.value==usersData.password)
     {
-                window.location.href = "./homePage.html";   
+                window.location.href = "./Home.html";   
     }
 }
