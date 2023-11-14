@@ -1,3 +1,4 @@
+let allUsersArr1: any = [];
 
  let xhr4 = new XMLHttpRequest();
 xhr4.open("GET", "../data/users.json", true);
@@ -10,8 +11,8 @@ xhr4.onprogress = function () {
 xhr4.onload = function () {
     let data = JSON.parse(this.responseText);
     let usersArr = data.users;
-    allUsersArr.push(...usersArr);
-    console.log(allUsersArr);
+    allUsersArr1.push(...usersArr);
+    console.log(allUsersArr1);
 }
 xhr4.send()
 
@@ -31,4 +32,4 @@ function login()
     }
 }
 
-document.getElementById("logbtn")?.addEventListener("click",login);
+document.getElementById("logbtn1")?.addEventListener("click",login);
