@@ -16,7 +16,7 @@
                     "postNumber": 1,
                     "creationTime":"1 Hour Ago",
                     "postImage":"../Media/picture1.jpg",
-                    "postContent": "ldkfghdfkjlghsddsfsdfoihsfposuifhgdspoiugfpsouf",
+                    "postContent": "You only live once, but if you do it right, once is enough",
                     "postLikes": 457,
                     "liked":false,
                     "postComments": [
@@ -29,7 +29,7 @@
                     "postNumber": 2,
                     "creationTime":"3 Hour Ago",
                     "postImage":"../Media/picture2.jpg",
-                    "postContent": "post 2",
+                    "postContent": "In a world where you can be anything, be kind",
                     "postLikes": 577,
                     "liked":false,
                     "postComments": [
@@ -42,7 +42,7 @@
                     "postNumber": 3,
                     "creationTime":"1 Day Ago",
                     "postImage":"../Media/picture3.jpg",
-                    "postContent": "post 3",
+                    "postContent": "Live, laugh, like my photo",
                     "postLikes": 1654,
                     "liked":false,
                     "postComments": [

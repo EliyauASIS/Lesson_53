@@ -15,20 +15,21 @@
 <body>
     <div id="container">
         <div id="navigationBar"> 
-            <h1  id="profileBtn">Inala-book</h1>
+            <h1 id="profileBtn">Hand-book</h1>
             <a href="../Pages/Profile.html" id="profileBtn">My Profile</a>
             <a href="../Pages/Login.html" id="logoutBtn">Log-Out</a>
         </div>
         <div id="posts">
             <div id="createPostDiv">
+                <h1 id="titleUpload">Upload a Post</h1>
+                <label for="uploadImage"><img id="cameraPlus" src="../Media/camera-plus-solid-240.png" ></label></br>
+                <input type="file" id="uploadImage" accept="image/png, image/jpg">
                 <input type="text" id="newPostContent" placeholder="What are you thinking about...?"></br>
-                <button id="clearNewPostContent">clear</button><button id="shareNewPost">share</button>
+                <button id="shareNewPost" onclick="addPost(newPostContent.value)">Share</button>
             </div>
             <div id="explorerPosts">
-            </div>
-        </div>
-        <div id="explorerUsers">
 
+            </div>
         </div>
 
     </div>
