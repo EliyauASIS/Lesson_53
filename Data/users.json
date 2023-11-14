@@ -1,6 +1,7 @@
 {
     "users": [
         {
+            "userProfile":"../Media/eliyahu_profile.png",
             "firstName": "Eliyahu",
             "lastName": "Asis",
             "username": "eliyahuasis",
@@ -10,71 +11,53 @@
             "password": "eli123",
             "posts": [
                 {
+                    "userProfile":"../Media/eliyahu_profile.png",
                     "postCreator": "eliyahuasis",
                     "postNumber": 1,
+                    "creationTime":"1 Hour Ago",
                     "postImage":"../Media/picture1.jpg",
-                    "postContent": "post 1",
+                    "postContent": "ldkfghdfkjlghsddsfsdfoihsfposuifhgdspoiugfpsouf",
                     "postLikes": 457,
                     "liked":false,
                     "postComments": [
-                        {
-                            "commentNumber": 1,
-                            "commentContent": "post 1 comment 1"
-                        },
-                        {
-                            "commentNumber": 2,
-                            "commentContent": "post 1 comment 2"
-                        }
+                        
                     ]
                 },
                 {
+                    "userProfile":"../Media/eliyahu_profile.png",
                     "postCreator": "eliyahuasis",
                     "postNumber": 2,
+                    "creationTime":"3 Hour Ago",
                     "postImage":"../Media/picture2.jpg",
                     "postContent": "post 2",
                     "postLikes": 577,
                     "liked":false,
                     "postComments": [
-                        {
-                            "commentNumber": 1,
-                            "commentContent": "post 2 comment 1"
-                        },
-                        {
-                            "commentNumber": 2,
-                            "commentContent": "post 2 comment 2"
-                        }
+                        
                     ]
                 },
                 {
+                    "userProfile":"../Media/eliyahu_profile.png",
                     "postCreator": "eliyahuasis",
                     "postNumber": 3,
+                    "creationTime":"1 Day Ago",
                     "postImage":"../Media/picture3.jpg",
                     "postContent": "post 3",
                     "postLikes": 1654,
                     "liked":false,
                     "postComments": [
-                        {
-                            "commentNumber": 1,
-                            "commentContent": "post 3 comment 1"
-                        },
-                        {
-                            "commentNumber": 2,
-                            "commentContent": "post 3 comment 2"
-                        },
-                        {
-                            "commentNumber": 3,
-                            "commentContent": "post 3 comment 3"
-                        }
+                        
                     ]
                 }
             ],
             "friends": [
                 {
-                    "username": "sageesharabi"
+                    
                 }
             ]
         },
         {
+            "userProfile":"../Media/sagee_profile.png",
             "firstName": "Sagee",
             "lastName": "Sharabi",
             "username": "sageesharabi",
@@ -138,7 +121,8 @@
                 }
             ]
         },
-        {
+        {           
+            "userProfile":"../Media/shiran_profile.png",
             "firstName": "Shiran",
             "lastName": "com",
             "username": "shirancom",

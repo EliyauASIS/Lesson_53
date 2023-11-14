@@ -1,3 +1,6 @@
+body{
+    font-family: 'Noto Sans Kawi', sans-serif;
+}
 #navigationBar {
     background-color: #4267B2;
     position: fixed;
@@ -26,7 +29,7 @@
     margin-top: 3vh;
 }
 #posts{
-    width: fit-content;
+   align-items: center;
 }
 
 #createPostDiv {
@@ -73,28 +76,65 @@
 .post{
     align-items: center;
     background-color: rgb(198, 198, 198);
-    margin-bottom: 3vh;
+    margin-top: 3vh;
     width: 50vh;
-    height:90vh;
+    height:68vh;
+    border-radius: 1vh;
+    position: relative;
+    margin-left:75vh;
+    z-index: -5;
+}
+.profilePicture{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 20vh;
+    margin-top: 3vh;
+    margin-left: 5vh;
+    float: left;
     
 }
 .postCreatorName{
-    float: left;
-    margin-left: 7vh;
-    margin-top: 2vh;
-    font-size: 3vh;
+    margin-left: 2vh;
+    margin-top: 3.5vh;
+    font-size: 2.5vh;
     font-weight: bold;
+    float: left;
+}
+.postCreatorNameStatus{
+  margin-right: 1vh;
+    font-size: 1.5vh;
+    font-weight: bold;
+    margin-left: -12vh;
 }
 .postImage{
-    margin-top: 4vh;
+    margin-top: 1vh;
     height: 48vh;
     width: 48vh;
+}
+.creationPost{
+    margin-top: 4.5vh;
+    float: right;
+    margin-right: 6vh;
+    font-size: 1.5vh;
+}
+.itemContent{
+    float: left;
+    margin-top: 2vh;
+    
 }
 .likeBtn{
    display: none;
 }
 .likeLabel{
-    font-size: 5vh;
+    font-size: 3vh;
+    float: left;
+    margin-left: 3vh;
+}
+.likes{
+    font-size: 1.5vh;
+    float: left;
+    margin-left: 1vh;
+    margin-top: 1vh;
 }
 .comment{
     align-items: center;
@@ -102,4 +142,9 @@
     width: 49vh;
     height: 7vh;
     text-align: center;
+}
+#explorerUsers{
+    background-color: #0051ff;
+    width: 50vh;
+    height: 50vh;
 }
