@@ -1,15 +1,15 @@
 "use strict";
 var _a;
 let allUsersArr = [];
-let xhr = new XMLHttpRequest();
-xhr.open("GET", "../data/users.json", true);
-xhr.onload = function () {
+let xhr3 = new XMLHttpRequest();
+xhr3.open("GET", "../data/users.json", true);
+xhr3.onload = function () {
     let data = JSON.parse(this.responseText);
     let usersArr = data.users;
     allUsersArr.push(...usersArr);
     console.log(allUsersArr);
 };
-xhr.send();
+xhr3.send();
 class User {
     constructor(firstName, lastName, username, age, email, password) {
         this.firstName = firstName;
