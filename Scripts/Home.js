@@ -4,12 +4,12 @@ let postsArr = [];
 let commentsArr = [];
 // let usernameLogin: any = JSON.parse(localStorage.getItem("user"));
 // usernameLogin = usernameLogin.username
-let xhr = new XMLHttpRequest();
-xhr.open("GET", "../Data/users.json", true);
-xhr.onprogress = function () {
+let xhr2 = new XMLHttpRequest();
+xhr2.open("GET", "../Data/users.json", true);
+xhr2.onprogress = function () {
     console.log("Loading...");
 };
-xhr.onload = function () {
+xhr2.onload = function () {
     let response = JSON.parse(this.responseText);
     response = response.users;
     usersArr = response;
@@ -19,10 +19,10 @@ xhr.onload = function () {
     postsArr = usersArr[0].posts;
     showExplorerPosts();
 };
-xhr.onerror = function () {
+xhr2.onerror = function () {
     console.log("Error");
 };
-xhr.send();
+xhr2.send();
 let explorerPosts = document.getElementById("explorerPosts");
 const showExplorerPosts = () => {
     explorerPosts.innerHTML = "";
@@ -31,12 +31,14 @@ const showExplorerPosts = () => {
         postDiv.className = "post";
         explorerPosts.appendChild(postDiv);
         postDiv.innerHTML +=
-            `<span class="postCreatorName">${postsArr[x].postCreator}</span>
+            `<img class="profilePicture" src="${postsArr[x].userProfile}" alt="" srcset="">
+            <span class="postCreatorName">${postsArr[x].postCreator}</span>
+            <span class="creationPost">${postsArr[x].creationTime}</span>
             <img class=postImage src="${postsArr[x].postImage}"></br>
-            <span class="itemContent">${postsArr[x].postContent}</span>
             <label id="likeLabel${x}" class="likeLabel" for="likeBtn${x}"> <i class='bx bxs-heart' id='bx-bxs-heart${x}'></i></label>
             <button id="likeBtn${x}" class="likeBtn" onclick="like_handler(${x})"></button>     
             <span class="likes">${postsArr[x].postLikes} Likes</span></br>
+            <span class="itemContent"> <span class="postCreatorNameStatus">${postsArr[x].postCreator}: </span> ${postsArr[x].postContent}</span>
            </br>`;
         commentsArr = postsArr[x].postComments;
         for (let y in commentsArr) {
@@ -64,4 +66,9 @@ const like_handler = (index) => {
         like.style.color = "red";
     }
     showExplorerPosts();
+};
+let pepoleExplorer = document.getElementById("ExplorerUsers");
+const pepoleExplorer_handler = () => {
+    for (let x in usersArr) {
+    }
 };
