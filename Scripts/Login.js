@@ -7,6 +7,6 @@ void function login() {
         alert("Incorrect Data, Please try again!");
     }
     else if (username.value == usersData.username && password.value == usersData.password) {
-        window.location.href = "./homePage.html";
+        window.location.href = "./Home.html";
     }
 };
