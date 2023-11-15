@@ -41,10 +41,10 @@ body{
     border: 2px solid #4267B2;
     background-color: #ffffff;
     align-items: center;
-    width: 60vh;
+    width: 50vh;
     text-align: center;
-    margin-left: 70vh;
-    height: 50vh;
+    margin-left: 135vh;
+    height: 40vh;
     border-radius: 1vh;
     color: white;
 }
@@ -59,13 +59,13 @@ body{
 }
 
 #cameraPlus{
-    height: 25vh;
-    width: 25vh;
+    height: 15vh;
+    width: 15vh;
     color: #0051ff;
 }
 
 #newPostContent {
-    width: 50vh;
+    width: 30vh;
     height: 4vh; 
     margin-top: 2vh;
     margin-bottom: 1vh;

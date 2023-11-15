@@ -1,7 +1,7 @@
 {
     "users": [
         {
-            "userProfile":"../Media/eliyahu_profile.png",
+            "userProfile": "../Media/eliyahu_profile.png",
             "firstName": "Eliyahu",
             "lastName": "Asis",
             "username": "eliyahuasis",
@@ -11,54 +11,45 @@
             "password": "eli123",
             "posts": [
                 {
-                    "userProfile":"../Media/eliyahu_profile.png",
+                    "userProfile": "../Media/eliyahu_profile.png",
                     "postCreator": "eliyahuasis",
                     "postNumber": 1,
-                    "creationTime":"1 Hour Ago",
-                    "postImage":"../Media/picture1.jpg",
+                    "creationTime": "1 Hour Ago",
+                    "postImage": "../Media/picture1.jpg",
                     "postContent": "You only live once, but if you do it right, once is enough",
                     "postLikes": 457,
-                    "liked":false,
-                    "postComments": [
-                        
-                    ]
+                    "liked": false,
+                    "postComments": []
                 },
                 {
-                    "userProfile":"../Media/eliyahu_profile.png",
+                    "userProfile": "../Media/eliyahu_profile.png",
                     "postCreator": "eliyahuasis",
                     "postNumber": 2,
-                    "creationTime":"3 Hour Ago",
-                    "postImage":"../Media/picture2.jpg",
+                    "creationTime": "3 Hour Ago",
+                    "postImage": "../Media/picture2.jpg",
                     "postContent": "In a world where you can be anything, be kind",
                     "postLikes": 577,
-                    "liked":false,
-                    "postComments": [
-                        
-                    ]
+                    "liked": false,
+                    "postComments": []
                 },
                 {
-                    "userProfile":"../Media/eliyahu_profile.png",
+                    "userProfile": "../Media/eliyahu_profile.png",
                     "postCreator": "eliyahuasis",
                     "postNumber": 3,
-                    "creationTime":"1 Day Ago",
-                    "postImage":"../Media/picture3.jpg",
+                    "creationTime": "1 Day Ago",
+                    "postImage": "../Media/picture3.jpg",
                     "postContent": "Live, laugh, like my photo",
                     "postLikes": 1654,
-                    "liked":false,
-                    "postComments": [
-                        
-                    ]
+                    "liked": false,
+                    "postComments": []
                 }
             ],
-            "friends": 
-                {
-                    "1": "sageesharabi",
-                    "2": "shirancom"          
-                }
-            
+            "friends": {
+               
+            }
         },
         {
-            "userProfile":"../Media/sagee_profile.png",
+            "userProfile": "../Media/sagee_profile.png",
             "firstName": "Sagee",
             "lastName": "Sharabi",
             "username": "sageesharabi",
@@ -68,63 +59,47 @@
             "password": "sagee123",
             "posts": [
                 {
+                    "userProfile": "../Media/sagee_profile.png",
                     "postCreator": "sageesharabi",
                     "postNumber": 1,
-                    "postContent": "post 1",
-                    "postLikes": 1,
-                    "postComments": [
-                        {
-                            "commentNumber": 1,
-                            "postContent": "comment 1"
-                        },
-                        {
-                            "commentNumber": 2,
-                            "postContent": "comment 2"
-                        }
-                    ]
+                    "creationTime": "1 Hour Ago",
+                    "postImage": "../Media/picture1.jpg",
+                    "postContent": "You only live once, but if you do it right, once is enough",
+                    "postLikes": 457,
+                    "liked": false,
+                    "postComments": []
                 },
                 {
+                    "userProfile": "../Media/sagee_profile.png",
                     "postCreator": "sageesharabi",
                     "postNumber": 2,
-                    "postContent": "post 2",
-                    "postLikes": 1,
-                    "postComments": [
-                        {
-                            "commentNumber": 1,
-                            "postContent": "comment 1"
-                        }
-                    ]
+                    "creationTime": "3 Hour Ago",
+                    "postImage": "../Media/picture2.jpg",
+                    "postContent": "In a world where you can be anything, be kind",
+                    "postLikes": 577,
+                    "liked": false,
+                    "postComments": []
                 },
                 {
+                    "userProfile": "../Media/sagee_profile.png",
                     "postCreator": "sageesharabi",
                     "postNumber": 3,
-                    "postContent": "post 3",
-                    "postLikes": 1,
-                    "postComments": [
-                        {
-                            "commentNumber": 1,
-                            "postContent": "comment 1"
-                        },
-                        {
-                            "commentNumber": 2,
-                            "postContent": "comment 2"
-                        },
-                        {
-                            "commentNumber": 3,
-                            "postContent": "comment 3"
-                        }
-                    ]
+                    "creationTime": "1 Day Ago",
+                    "postImage": "../Media/picture3.jpg",
+                    "postContent": "Live, laugh, like my photo",
+                    "postLikes": 1654,
+                    "liked": false,
+                    "postComments": []
                 }
             ],
             "friends": [
                 {
-                    "1": "eliyahuasis",
-                    "2": "shirancom"
+                    
                 }
             ]
         },
-        {           
-            "userProfile":"../Media/shiran_profile.png",
+        {
+            "userProfile": "../Media/shiran_profile.png",
             "firstName": "Shiran",
             "lastName": "com",
             "username": "shirancom",
@@ -134,58 +109,42 @@
             "password": "123456",
             "posts": [
                 {
-                    "postCreator": "shirankom",
+                    "userProfile": "../Media/shiran_profile.png",
+                    "postCreator": "shirancom",
                     "postNumber": 1,
-                    "postContent": "post 1",
-                    "postLikes": 1,
-                    "postComments": [
-                        {
-                            "commentNumber": 1,
-                            "postContent": "comment 1"
-                        },
-                        {
-                            "commentNumber": 2,
-                            "postContent": "comment 2"
-                        }
-                    ]
+                    "creationTime": "1 Hour Ago",
+                    "postImage": "../Media/picture1.jpg",
+                    "postContent": "You only live once, but if you do it right, once is enough",
+                    "postLikes": 457,
+                    "liked": false,
+                    "postComments": []
                 },
                 {
-                    "postCreator": "shirankom",
+                    "userProfile": "../Media/shiran_profile.png",
+                    "postCreator": "shirancom",
                     "postNumber": 2,
-                    "postContent": "post 2",
-                    "postLikes": 1,
-                    "postComments": [
-                        {
-                            "commentNumber": 1,
-                            "postContent": "comment 1"
-                        }
-                    ]
+                    "creationTime": "3 Hour Ago",
+                    "postImage": "../Media/picture2.jpg",
+                    "postContent": "In a world where you can be anything, be kind",
+                    "postLikes": 577,
+                    "liked": false,
+                    "postComments": []
                 },
                 {
-                    "postCreator": "shirankom",
+                    "userProfile": "../Media/shiran_profile.png",
+                    "postCreator": "shirancom",
                     "postNumber": 3,
-                    "postContent": "post 3",
-                    "postLikes": 1,
-                    "postComments": [
-                        {
-                            "commentNumber": 1,
-                            "postContent": "comment 1"
-                        },
-                        {
-                            "commentNumber": 2,
-                            "postContent": "comment 2"
-                        },
-                        {
-                            "commentNumber": 3,
-                            "postContent": "comment 3"
-                        }
-                    ]
+                    "creationTime": "1 Day Ago",
+                    "postImage": "../Media/picture3.jpg",
+                    "postContent": "Live, laugh, like my photo",
+                    "postLikes": 1654,
+                    "liked": false,
+                    "postComments": []
                 }
             ],
             "friends": [
                 {
-                    "1": "eliyahuasis",
-                    "2": "sageesharabi"
+                  
                 }
             ]
         }

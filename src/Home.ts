@@ -52,25 +52,27 @@ const showExplorerPosts = (): void => {
             <span class="likes">${postsArr[x].postLikes} Likes</span></br>
             <span class="itemContent"> <span class="postCreatorNameStatus">${postsArr[x].postCreator}: </span> ${postsArr[x].postContent}</span>
            </br>`
-
     }
-    (document.getElementById('profilePicturePage') as HTMLImageElement).src = postsArr[1].userProfile;
-
+    (document.getElementById('profilePicturePage') as HTMLImageElement).src = postsArr[0].userProfile;
 }
+
 let usersArr: any = 0
 usersArr = window.localStorage.getItem("Usersarr");
 let usersArr2 = JSON.parse(usersArr);
 
 
-let usernameLogin = window.localStorage.getItem("loginuser")
+let usernameLogin: any = 0
+usernameLogin = window.localStorage.getItem("loginuser")
 console.log(usernameLogin);
 
+let myProfile1: any
 
 for (let x in usersArr2) {
     if (usersArr2[x].username == usernameLogin) {
         postsArr = usersArr2[x].posts;
-        console.log(usersArr2);
-        console.log(postsArr);
+        window.localStorage.setItem("username", JSON.stringify(usernameLogin))
+        window.localStorage.setItem("usersArr", JSON.stringify(usersArr))
+        myProfile1 = usersArr2[x]
         showExplorerPosts();
     }
 }
@@ -129,8 +131,22 @@ const addPost = (PostContent: any) => {
 
 let pepoleExplorer = document.getElementById("ExplorerUsers") as HTMLDivElement
 
-const pepoleExplorer_handler = () => {
-    for (let x in usersArr) {
-
+function pepoleExplorer_handler(){
+    for (let x in usersArr2) {
+        if (usersArr2[x] != usernameLogin) {
+            console.log(usersArr2[x]);
+            pepoleExplorer.innerHTML += `
+            <a onclick="profile_handler(${usersArr2[x]})" href="../Pages/Profile.html">${usersArr2[x].username}</a>
+            `
+        }
     }
+}
+pepoleExplorer_handler()
+
+const myProfile = () => {
+    window.localStorage.setItem("userProfile", JSON.stringify(myProfile1))
+}
+
+function profile_handler(user: object){
+    window.localStorage.setItem("userProfile", JSON.stringify(user))
 }
