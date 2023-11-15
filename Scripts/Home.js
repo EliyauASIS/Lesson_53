@@ -13,6 +13,7 @@ xhr2.onload = function () {
     let response = JSON.parse(this.responseText);
     response = response.users;
     usersArr = response;
+    let loginUser = localStorage.getItem("login_user")
     for (let x in usersArr) {
         // if(usersArr[x] == usernameLogin){
     }
