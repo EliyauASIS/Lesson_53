@@ -28,16 +28,21 @@ class User {
 }
 
  function addUserfunc() {
-    let firstName = document.getElementById("firstName") as HTMLInputElement;
-    let lastName = document.getElementById("lastName") as HTMLInputElement;
-    let username = document.getElementById("username") as HTMLInputElement;
-    let age = document.getElementById("age") as HTMLInputElement;
-    let email = document.getElementById("email") as HTMLInputElement;
-    let password = document.getElementById("password") as HTMLInputElement;
+    let firstNameInput = document.getElementById("firstName") as HTMLInputElement;
+    let lastNameInput  = document.getElementById("lastName") as HTMLInputElement;
+    let usernameInput  = document.getElementById("username") as HTMLInputElement;
+    let ageInput  = document.getElementById("age") as HTMLInputElement;
+    let emailInput  = document.getElementById("email") as HTMLInputElement;
+    let passwordInput  = document.getElementById("password") as HTMLInputElement;
 
 
 
-    if (firstName == undefined || lastName == undefined || username== undefined || age== undefined || email==undefined||password==undefined)
+    if ( firstNameInput.value === "" ||
+    lastNameInput.value === "" ||
+    usernameInput.value === "" ||
+    ageInput.value === "" ||
+    emailInput.value === "" ||
+    passwordInput.value === "")
     {
         alert("Missing Data...");
         localStorage.clear();
@@ -54,7 +59,7 @@ class User {
             alert("User ALLREADY EXIST!");
             localStorage.clear();
         } else {
-            let newUser = new User(firstName.value,lastName.value,username.value,age.value,email.value,password.value);
+            let newUser = new User(firstNameInput.value,lastNameInput.value,usernameInput.value,ageInput.value,emailInput.value,passwordInput.value);
             allUsersArr.push(newUser);
             localStorage.setItem("newUser", JSON.stringify(newUser));
             window.location.href = ("../Pages/Login.html");

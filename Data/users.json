@@ -50,11 +50,14 @@
                     ]
                 }
             ],
-            "friends": [
+            "friends": 
                 {
+                    "1": "sageesharabi",
+                    "2": "shirancom"
                     
+                     
                 }
-            ]
+            
         },
         {
             "userProfile":"../Media/sagee_profile.png",
@@ -62,7 +65,7 @@
             "lastName": "Sharabi",
             "username": "sageesharabi",
             "age": 26,
-            "city": "Tel-aviv",
+            "city": "Rehovot",
             "email": "sagee123@gmail.com",
             "password": "sagee123",
             "posts": [
@@ -117,7 +120,8 @@
             ],
             "friends": [
                 {
-                    "username": "eliyahuasis"
+                    "1": "eliyahuasis",
+                    "2": "shirancom"
                 }
             ]
         },
@@ -182,7 +186,8 @@
             ],
             "friends": [
                 {
-                    "username": "eliyahuasis"
+                    "1": "eliyahuasis",
+                    "2": "sageesharabi"
                 }
             ]
         }

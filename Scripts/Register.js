@@ -21,13 +21,18 @@ class User {
     }
 }
 function addUserfunc() {
-    let firstName = document.getElementById("firstName");
-    let lastName = document.getElementById("lastName");
-    let username = document.getElementById("username");
-    let age = document.getElementById("age");
-    let email = document.getElementById("email");
-    let password = document.getElementById("password");
-    if (firstName == undefined || lastName == undefined || username == undefined || age == undefined || email == undefined || password == undefined) {
+    let firstNameInput = document.getElementById("firstName");
+    let lastNameInput = document.getElementById("lastName");
+    let usernameInput = document.getElementById("username");
+    let ageInput = document.getElementById("age");
+    let emailInput = document.getElementById("email");
+    let passwordInput = document.getElementById("password");
+    if (firstNameInput.value === "" ||
+        lastNameInput.value === "" ||
+        usernameInput.value === "" ||
+        ageInput.value === "" ||
+        emailInput.value === "" ||
+        passwordInput.value === "") {
         alert("Missing Data...");
         localStorage.clear();
     }
@@ -44,7 +49,7 @@ function addUserfunc() {
             localStorage.clear();
         }
         else {
-            let newUser = new User(firstName.value, lastName.value, username.value, age.value, email.value, password.value);
+            let newUser = new User(firstNameInput.value, lastNameInput.value, usernameInput.value, ageInput.value, emailInput.value, passwordInput.value);
             allUsersArr.push(newUser);
             localStorage.setItem("newUser", JSON.stringify(newUser));
             window.location.href = ("../Pages/Login.html");
