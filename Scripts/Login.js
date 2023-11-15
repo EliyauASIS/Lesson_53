@@ -22,7 +22,7 @@ function login() {
     else if (username.value == allUsersArr1.username && password.value == allUsersArr1.password) {
         window.location.href = "./Home.html";
     }
-     ;
+     * /;
     //document.getElementById("logbtn1")?.addEventListener("click",login);
 }
 //document.getElementById("logbtn1")?.addEventListener("click",login);

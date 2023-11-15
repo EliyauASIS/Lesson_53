@@ -34,6 +34,7 @@ xhr2.send()
 
 let explorerPosts = document.getElementById("explorerPosts") as HTMLDivElement
 
+
 const showExplorerPosts = (): void => {
     explorerPosts.innerHTML = ""
     for (let x in postsArr) {
@@ -59,6 +60,8 @@ const showExplorerPosts = (): void => {
         //         `<h2 class="postCreator">${commentsArr[x].commentContent}</h2></br></br></br>`
         // }
     }
+    (document.getElementById('profilePicturePage') as HTMLImageElement).src = postsArr[2].userProfile;
+
 }
 
 const like_handler = (index: any) => {
@@ -83,27 +86,32 @@ let inputCameraSrc: any
 
 let imageCamera = document.getElementById("cameraPlus") as HTMLImageElement
 let inputImage: any = document.getElementById("uploadImage") as HTMLElement
-
+let uploadedImage = false
 inputImage.onchange = function () {
     imageCamera.src = URL.createObjectURL(inputImage.files[0]);
     inputCameraSrc = imageCamera.src
+    uploadedImage=true
 }
 
 const addPost = (PostContent: any) => {
-    let newPostObj = {
-        userProfile:usersArr[0].userProfile,
-        postCreator: usersArr[0].username,
-        creationTime:"Now",
-        postImage: inputCameraSrc,
-        postContent: PostContent,
-        postLikes: 0,
-        liked:false,
-        postComments: []
+    if (uploadedImage == false || PostContent == "") {
+
     }
-    postsArr.unshift(newPostObj);
-    console.log(postsArr);
-    showExplorerPosts();
-    
+    else {
+        let newPostObj = {
+            userProfile: usersArr[0].userProfile,
+            postCreator: usersArr[0].username,
+            creationTime: "Now",
+            postImage: inputCameraSrc,
+            postContent: PostContent,
+            postLikes: 0,
+            liked: false,
+            postComments: []
+        }
+        postsArr.unshift(newPostObj);
+        console.log(postsArr);
+        showExplorerPosts();
+    }
 }
 
 

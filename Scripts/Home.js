@@ -49,6 +49,7 @@ const showExplorerPosts = () => {
         //         `<h2 class="postCreator">${commentsArr[x].commentContent}</h2></br></br></br>`
         // }
     }
+    document.getElementById('profilePicturePage').src = postsArr[2].userProfile;
 };
 const like_handler = (index) => {
     if (postsArr[index].liked == false) {
@@ -70,24 +71,30 @@ const like_handler = (index) => {
 let inputCameraSrc;
 let imageCamera = document.getElementById("cameraPlus");
 let inputImage = document.getElementById("uploadImage");
+let uploadedImage = false;
 inputImage.onchange = function () {
     imageCamera.src = URL.createObjectURL(inputImage.files[0]);
     inputCameraSrc = imageCamera.src;
+    uploadedImage = true;
 };
 const addPost = (PostContent) => {
-    let newPostObj = {
-        userProfile: usersArr[0].userProfile,
-        postCreator: usersArr[0].username,
-        creationTime: "Now",
-        postImage: inputCameraSrc,
-        postContent: PostContent,
-        postLikes: 0,
-        liked: false,
-        postComments: []
-    };
-    postsArr.unshift(newPostObj);
-    console.log(postsArr);
-    showExplorerPosts();
+    if (uploadedImage == false || PostContent == "") {
+    }
+    else {
+        let newPostObj = {
+            userProfile: usersArr[0].userProfile,
+            postCreator: usersArr[0].username,
+            creationTime: "Now",
+            postImage: inputCameraSrc,
+            postContent: PostContent,
+            postLikes: 0,
+            liked: false,
+            postComments: []
+        };
+        postsArr.unshift(newPostObj);
+        console.log(postsArr);
+        showExplorerPosts();
+    }
 };
 let pepoleExplorer = document.getElementById("ExplorerUsers");
 const pepoleExplorer_handler = () => {
