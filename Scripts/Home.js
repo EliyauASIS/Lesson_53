@@ -49,9 +49,11 @@ let usersArr2 = JSON.parse(usersArr);
 let usernameLogin = 0;
 usernameLogin = window.localStorage.getItem("loginuser");
 console.log(usernameLogin);
+console.log("fdsf");
 let myProfile1;
 for (let x in usersArr2) {
-    if (usersArr2[x].username == usernameLogin) {
+    console.log(x);
+    if (usersArr2[x].username === usernameLogin) {
         postsArr = usersArr2[x].posts;
         window.localStorage.setItem("username", JSON.stringify(usernameLogin));
         window.localStorage.setItem("usersArr", JSON.stringify(usersArr));

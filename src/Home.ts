@@ -64,11 +64,15 @@ let usersArr2 = JSON.parse(usersArr);
 let usernameLogin: any = 0
 usernameLogin = window.localStorage.getItem("loginuser")
 console.log(usernameLogin);
+console.log("fdsf");
+
 
 let myProfile1: any
 
 for (let x in usersArr2) {
-    if (usersArr2[x].username == usernameLogin) {
+    console.log(x);
+    
+    if (usersArr2[x].username === usernameLogin) {
         postsArr = usersArr2[x].posts;
         window.localStorage.setItem("username", JSON.stringify(usernameLogin))
         window.localStorage.setItem("usersArr", JSON.stringify(usersArr))
@@ -76,6 +80,7 @@ for (let x in usersArr2) {
         showExplorerPosts();
     }
 }
+
 
 const like_handler = (index: any) => {
     if (postsArr[index].liked == false) {
@@ -131,7 +136,7 @@ const addPost = (PostContent: any) => {
 
 let pepoleExplorer = document.getElementById("ExplorerUsers") as HTMLDivElement
 
-function pepoleExplorer_handler(){
+function pepoleExplorer_handler() {
     for (let x in usersArr2) {
         if (usersArr2[x] != usernameLogin) {
             console.log(usersArr2[x]);
@@ -148,6 +153,6 @@ const myProfile = () => {
     window.localStorage.setItem("userProfile", JSON.stringify(myProfile1))
 }
 
-function profile_handler(user: object){
+function profile_handler(user: object) {
     window.localStorage.setItem("userProfile", JSON.stringify(user))
 }
