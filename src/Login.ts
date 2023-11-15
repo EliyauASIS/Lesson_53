@@ -31,7 +31,11 @@ function login()
             console.log("shiran");
         }
 
-    /*if (username.value == "" || password.value == "" || username.value!=usersArr.username || password.value!=usersArr.password ) {
+   
+}
+
+
+ /*if (username.value == "" || password.value == "" || username.value!=usersArr1.username || password.value!=usersArr1.password ) {
         alert( "Incorrect Data, Please try again!");
         
     } 
@@ -39,6 +43,5 @@ function login()
     {
                 window.location.href = "./Home.html";   
     }*/
-}
 
 //document.getElementById("logbtn1")?.addEventListener("click",login);
