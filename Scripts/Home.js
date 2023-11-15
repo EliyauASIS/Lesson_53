@@ -1,29 +1,28 @@
 "use strict";
-let usersArr = [];
+// let usersArr: any = []
 let postsArr = [];
 let commentsArr = [];
 // let usernameLogin: any = JSON.parse(localStorage.getItem("user"));
 // usernameLogin = usernameLogin.username
-let xhr2 = new XMLHttpRequest();
-xhr2.open("GET", "../Data/users.json", true);
-xhr2.onprogress = function () {
-    console.log("Loading...");
-};
-xhr2.onload = function () {
-    let response = JSON.parse(this.responseText);
-    response = response.users;
-    usersArr = response;
-    let loginUser = localStorage.getItem("login_user")
-    for (let x in usersArr) {
-        // if(usersArr[x] == usernameLogin){
-    }
-    postsArr = usersArr[0].posts;
-    showExplorerPosts();
-};
-xhr2.onerror = function () {
-    console.log("Error");
-};
-xhr2.send();
+// let xhr2 = new XMLHttpRequest();
+// xhr2.open("GET", "../Data/users.json", true)
+// xhr2.onprogress = function () {
+//     console.log("Loading...");
+// }
+// xhr2.onload = function () {
+//     let response: any = JSON.parse(this.responseText)
+//     response = response.users
+//     usersArr = response
+//     for (let x in usersArr) {
+//         // if(usersArr[x] == usernameLogin){
+//     }
+//     postsArr = usersArr[0].posts
+//     showExplorerPosts()
+// }
+// xhr2.onerror = function () {
+//     console.log("Error");
+// }
+// xhr2.send()
 let explorerPosts = document.getElementById("explorerPosts");
 const showExplorerPosts = () => {
     explorerPosts.innerHTML = "";
@@ -41,17 +40,22 @@ const showExplorerPosts = () => {
             <span class="likes">${postsArr[x].postLikes} Likes</span></br>
             <span class="itemContent"> <span class="postCreatorNameStatus">${postsArr[x].postCreator}: </span> ${postsArr[x].postContent}</span>
            </br>`;
-        // commentsArr = postsArr[x].postComments
-        // for (let y in commentsArr) {
-        //     let commentDiv = document.createElement("div") as HTMLDivElement
-        //     commentDiv.className = "comment"
-        //     postDiv.appendChild(commentDiv)
-        //     commentDiv.innerHTML +=
-        //         `<h2 class="postCreator">${commentsArr[x].commentContent}</h2></br></br></br>`
-        // }
     }
-    document.getElementById('profilePicturePage').src = postsArr[2].userProfile;
+    document.getElementById('profilePicturePage').src = postsArr[1].userProfile;
 };
+let usersArr = 0;
+usersArr = window.localStorage.getItem("Usersarr");
+let usersArr2 = JSON.parse(usersArr);
+let usernameLogin = window.localStorage.getItem("loginuser");
+console.log(usernameLogin);
+for (let x in usersArr2) {
+    if (usersArr2[x].username == usernameLogin) {
+        postsArr = usersArr2[x].posts;
+        console.log(usersArr2);
+        console.log(postsArr);
+        showExplorerPosts();
+    }
+}
 const like_handler = (index) => {
     if (postsArr[index].liked == false) {
         postsArr[index].postLikes += 1;
@@ -82,9 +86,10 @@ const addPost = (PostContent) => {
     if (uploadedImage == false || PostContent == "") {
     }
     else {
+        let userProfile1 = document.getElementById('profilePicturePage').src;
         let newPostObj = {
-            userProfile: usersArr[0].userProfile,
-            postCreator: usersArr[0].username,
+            userProfile: userProfile1,
+            postCreator: usernameLogin,
             creationTime: "Now",
             postImage: inputCameraSrc,
             postContent: PostContent,
