@@ -38,7 +38,7 @@ input{
     padding: 5px;
 }
 
-#logbtn{
+#logbtn, #signin{
     margin-top: 15px;
     margin-left: 38%;
     width: 75px;
