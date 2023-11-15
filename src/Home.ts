@@ -45,20 +45,19 @@ const showExplorerPosts = (): void => {
             <span class="postCreatorName">${postsArr[x].postCreator}</span>
             <span class="creationPost">${postsArr[x].creationTime}</span>
             <img class=postImage src="${postsArr[x].postImage}"></br>
-            <label id="likeLabel${x}" class="likeLabel" for="likeBtn${x}"> <i class='bx bxs-heart' id='bx-bxs-heart${x}'></i></label>
+            <label id="likeLabel${x}" class="likeLabel" for="likeBtn${x}"> <i class='bx bxs-heart' id='heart${x}'></i></label>
             <button id="likeBtn${x}" class="likeBtn" onclick="like_handler(${x})"></button>     
             <span class="likes">${postsArr[x].postLikes} Likes</span></br>
             <span class="itemContent"> <span class="postCreatorNameStatus">${postsArr[x].postCreator}: </span> ${postsArr[x].postContent}</span>
            </br>`
-        commentsArr = postsArr[x].postComments
-        for (let y in commentsArr) {
-            let commentDiv = document.createElement("div") as HTMLDivElement
-            commentDiv.className = "comment"
-            postDiv.appendChild(commentDiv)
-            commentDiv.innerHTML +=
-                `<h2 class="postCreator">${commentsArr[x].commentContent}</h2></br></br></br>`
-        }
-
+        // commentsArr = postsArr[x].postComments
+        // for (let y in commentsArr) {
+        //     let commentDiv = document.createElement("div") as HTMLDivElement
+        //     commentDiv.className = "comment"
+        //     postDiv.appendChild(commentDiv)
+        //     commentDiv.innerHTML +=
+        //         `<h2 class="postCreator">${commentsArr[x].commentContent}</h2></br></br></br>`
+        // }
     }
 }
 
@@ -66,27 +65,52 @@ const like_handler = (index: any) => {
     if (postsArr[index].liked == false) {
         postsArr[index].postLikes += 1;
         postsArr[index].liked = true;
-        let idLike = "likeLabel" + index
-        console.log(idLike);
-        
-        let like = document.getElementById(idLike) as HTMLLabelElement;
+        let idLike = "likeLabel" + index;
+        let like = document.getElementById(idLike) as HTMLElement;
         like.style.color = "red";
     }
     else {
         postsArr[index].postLikes -= 1;
         postsArr[index].liked = false;
-        let like = document.getElementById("likeLabel" + index) as HTMLLabelElement;
-        like.style.color = "red";
-
+        let idLike = "heart" + index;
+        let like = document.getElementById(idLike) as HTMLElement;
+        like.style.color = "black";
     }
-    showExplorerPosts()
+    showExplorerPosts();
 }
+
+let inputCameraSrc: any
+
+let imageCamera = document.getElementById("cameraPlus") as HTMLImageElement
+let inputImage: any = document.getElementById("uploadImage") as HTMLElement
+
+inputImage.onchange = function () {
+    imageCamera.src = URL.createObjectURL(inputImage.files[0]);
+    inputCameraSrc = imageCamera.src
+}
+
+const addPost = (PostContent: any) => {
+    let newPostObj = {
+        userProfile:usersArr[0].userProfile,
+        postCreator: usersArr[0].username,
+        creationTime:"Now",
+        postImage: inputCameraSrc,
+        postContent: PostContent,
+        postLikes: 0,
+        liked:false,
+        postComments: []
+    }
+    postsArr.unshift(newPostObj);
+    console.log(postsArr);
+    showExplorerPosts();
+    
+}
+
 
 let pepoleExplorer = document.getElementById("ExplorerUsers") as HTMLDivElement
 
-const pepoleExplorer_handler=()=>{
-    for(let x in usersArr){
-       
+const pepoleExplorer_handler = () => {
+    for (let x in usersArr) {
+
     }
 }
-
