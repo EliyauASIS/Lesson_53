@@ -142,3 +142,88 @@ body{
     font-weight: bold;
     float: left;
 }
+#Posts{
+    text-align: center;
+}
+.post{
+    border: #4267B2 solid 0.2vh;
+    align-items: center;
+    background-color: rgb(198, 198, 198);
+    margin-top: 3vh;
+    width: 50vh;
+    height: 68vh;
+    border-radius: 1vh;
+    position: relative;
+    margin-left: 75vh;
+}
+#profilePicturePage{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 20vh;
+    margin-top: 2vh;
+    margin-left: 5vh;
+    float: left;
+}
+.profilePicture{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 20vh;
+    margin-top: 2vh;
+    margin-left: 5vh;
+    float: left;
+}
+.postCreatorName{
+    margin-left: 1vh;
+    margin-top: 3vh;
+    font-size: 2vh;
+    font-weight: bold;
+    float: left;
+}
+.postCreatorNameStatus{
+    margin-right: 1.5vh;
+    font-size: 1.5vh;
+    font-weight: bold;
+    margin-left: -10vh;
+}
+.postImage{
+    margin-top: 1vh;
+    height: 48vh;
+    width: 48vh;
+}
+.creationPost{
+    margin-top: 4.5vh;
+    float: right;
+    margin-right: 6vh;
+    font-size: 1.5vh;
+}
+.itemContent{
+    float: left;
+    margin-top: 2vh;
+}
+.likeBtn{
+   display: none;
+}
+.likeLabel{
+    font-size: 2.5vh;
+    float: left;
+    margin-left: 3vh;
+    color: red;
+}
+.likes{
+    font-size: 1.5vh;
+    float: left;
+    margin-left: 1vh;
+    margin-top: 0.7vh;
+}
+.comment{
+    align-items: center;
+    background-color: white;
+    width: 49vh;
+    height: 7vh;
+    text-align: center;
+}
+#explorerUsers{
+    background-color: #0051ff;
+    width: 50vh;
+    height: 50vh;
+}

@@ -70,8 +70,7 @@ console.log("fdsf");
 let myProfile1: any
 
 for (let x in usersArr2) {
-    console.log(x);
-    
+    console.log(x); 
     if (usersArr2[x].username === usernameLogin) {
         postsArr = usersArr2[x].posts;
         window.localStorage.setItem("username", JSON.stringify(usernameLogin))
@@ -150,7 +149,9 @@ function pepoleExplorer_handler() {
 pepoleExplorer_handler()
 
 const myProfile = () => {
-    window.localStorage.setItem("userProfile", JSON.stringify(myProfile1))
+    window.localStorage.setItem("userProfile", JSON.stringify(myProfile1))    
+    window.localStorage.setItem("userPosts", JSON.stringify(postsArr))
+
 }
 
 function profile_handler(user: object) {

@@ -121,6 +121,7 @@ function pepoleExplorer_handler() {
 pepoleExplorer_handler();
 const myProfile = () => {
     window.localStorage.setItem("userProfile", JSON.stringify(myProfile1));
+    window.localStorage.setItem("userPosts", JSON.stringify(postsArr));
 };
 function profile_handler(user) {
     window.localStorage.setItem("userProfile", JSON.stringify(user));
