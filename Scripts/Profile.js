@@ -37,21 +37,23 @@ let usersArrs2 = JSON.parse(usersArrs);
 let usernameProfile = 0;
 usernameProfile = window.localStorage.getItem("username");
 console.log(usernameProfile);
+let usernameProfile2 = JSON.parse(usernameProfile);
 let log1 = document.getElementById("content");
 for (let x in usersArrs2) {
     log1.innerHTML = "";
-    // if (usersArrs2[x].username == usernameProfile) {
-    let profileDiv = document.createElement("div");
-    profileDiv.className = "profileUser";
-    log1.appendChild(profileDiv);
-    profileDiv.innerHTML +=
-        `<img class="profilePicture" src="${usersArrs2[x].userProfile}" alt="" srcset="">
-            <span class="postCreatorName">${usersArrs2[x].postCreator}</span>
-           </br>`;
-    if (usersArrs2[x].username != usernameLogin1) {
+    if (usersArrs2[x].username == usernameLogin1) {
+        let profileDiv = document.createElement("div");
+        profileDiv.className = "profileUser";
+        log1.appendChild(profileDiv);
         profileDiv.innerHTML +=
-            `<button class="friendRequestBtn">Friend Request</button>
+            `<img class="profilePicture" src="${usersArrs2[x].userProfile}" alt="" srcset="">
+            <span class="postCreatorName">${usernameProfile}</span>
            </br>`;
+        if (usersArrs2[x].username != usernameLogin1) {
+            profileDiv.innerHTML +=
+                `<button class="friendRequestBtn">Friend Request</button>
+           </br>`;
+        }
+        break;
     }
-    break;
 }
