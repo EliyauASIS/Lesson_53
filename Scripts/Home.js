@@ -28,35 +28,37 @@ let commentsArr = [];
 let explorerPosts = document.getElementById("explorerPosts");
 const showExplorerPosts = () => {
     explorerPosts.innerHTML = "";
-    for (let x in postsArr) {
+    for (let x in allPosts3) {
         let postDiv = document.createElement("div");
         postDiv.className = "post";
         explorerPosts.appendChild(postDiv);
         postDiv.innerHTML +=
-            `<img class="profilePicture" src="${postsArr[x].userProfile}" alt="" srcset="">
-            <span class="postCreatorName">${postsArr[x].postCreator}</span>
-            <span class="creationPost">${postsArr[x].creationTime}</span>
-            <img class=postImage src="${postsArr[x].postImage}"></br>
+            `<img class="profilePicture" src="${allPosts3[x].userProfile}" alt="" srcset="">
+            <span class="postCreatorName">${allPosts3[x].postCreator}</span>
+            <span class="creationPost">${allPosts3[x].creationTime}</span>
+            <img class=postImage src="${allPosts3[x].postImage}"></br>
             <label id="likeLabel${x}" class="likeLabel" for="likeBtn${x}"> <i class='bx bxs-heart' id='heart${x}'></i></label>
             <button id="likeBtn${x}" class="likeBtn" onclick="like_handler(${x})"></button>     
-            <span class="likes">${postsArr[x].postLikes} Likes</span></br>
-            <span class="itemContent"> <span class="postCreatorNameStatus">${postsArr[x].postCreator}: </span> ${postsArr[x].postContent}</span>
+            <span class="likes">${allPosts3[x].postLikes} Likes</span></br>
+            <span class="itemContent"> <span class="postCreatorNameStatus">${allPosts3[x].postCreator}: </span> ${allPosts3[x].postContent}</span>
            </br>`;
     }
-    document.getElementById('profilePicturePage').src = postsArr[0].userProfile;
+    document.getElementById('profilePicturePage').src = allPosts3[0].userProfile;
 };
 let usersArr = 0;
 usersArr = window.localStorage.getItem("Usersarr");
 let usersArr2 = JSON.parse(usersArr);
 let usernameLogin = 0;
 usernameLogin = window.localStorage.getItem("loginuser");
-console.log(usernameLogin);
+let allPosts2 = 0;
+allPosts2 = window.localStorage.getItem("allPosts");
+let allPosts3 = JSON.parse(allPosts2);
+console.log(allPosts3);
 let myProfile1;
 const profile2 = () => {
-    console.log(usersArr2);
     for (let x in usersArr2) {
         if (usersArr2[x].username === usernameLogin) {
-            postsArr = usersArr2[x].posts;
+            // allPosts3 = usersArr2[x].posts;
             window.localStorage.setItem("username", JSON.stringify(usernameLogin));
             window.localStorage.setItem("usersArr", JSON.stringify(usersArr2));
             myProfile1 = usersArr2[x];
@@ -67,16 +69,16 @@ const profile2 = () => {
 };
 profile2();
 const like_handler = (index) => {
-    if (postsArr[index].liked == false) {
-        postsArr[index].postLikes += 1;
-        postsArr[index].liked = true;
+    if (allPosts3[index].liked == false) {
+        allPosts3[index].postLikes += 1;
+        allPosts3[index].liked = true;
         let idLike = "likeLabel" + index;
         let like = document.getElementById(idLike);
         like.style.color = "red";
     }
     else {
-        postsArr[index].postLikes -= 1;
-        postsArr[index].liked = false;
+        allPosts3[index].postLikes -= 1;
+        allPosts3[index].liked = false;
         let idLike = "heart" + index;
         let like = document.getElementById(idLike);
         like.style.color = "black";
@@ -107,12 +109,10 @@ const addPost = (PostContent) => {
             liked: false,
             postComments: []
         };
-        postsArr.unshift(newPostObj);
-        console.log(postsArr);
+        allPosts3.unshift(newPostObj);
         for (let x in usersArr2) {
             if (usernameLogin == usersArr2[x].username) {
-                usersArr2[x].posts = postsArr;
-                console.log(usersArr2[x].posts);
+                usersArr2[x].posts = allPosts3;
             }
         }
         showExplorerPosts();
@@ -122,7 +122,6 @@ let pepoleExplorer = document.getElementById("ExplorerUsers");
 function pepoleExplorer_handler() {
     for (let x in usersArr2) {
         if (usersArr2[x] != usernameLogin) {
-            console.log(usersArr2[x]);
             pepoleExplorer.innerHTML += `
             <a onclick="profile_handler(${x})" href="../Pages/Profile.html">${usersArr2[x].username}</a></br>
             `;

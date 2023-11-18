@@ -53,6 +53,8 @@ function login() {
                 if (username.value === user.username && password.value === user.password) {
                     localStorage.setItem("loginuser", user.username);
                     localStorage.setItem("Usersarr", JSON.stringify(allUsersArr1));
+                    let allPosts = user.posts 
+                    window.localStorage.setItem("allPosts",JSON.stringify(allPosts))
                     window.location.href = "../Pages/Home.html";
                     flag = true;
                     break;

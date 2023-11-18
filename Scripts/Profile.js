@@ -53,7 +53,7 @@ for (let x in usersArrs2) {
            </br>`;
         if (usersArrs2[x].username != usernameLogin1) {
             profileDiv.innerHTML +=
-                `<button id="friendRequestBtn" onclick="newFriend()" >Friend Request</button>
+                `<button id="friendRequestBtn" onclick="newFriend(${x})" >Friend Request</button>
            </br>`;
         }
         break;
@@ -75,6 +75,12 @@ for (let x in postsArrs2) {
             <span class="itemContent"> <span class="postCreatorNameStatus">${postsArrs2[x].postCreator}: </span> ${postsArrs2[x].postContent}</span>
            </br>`;
 }
-const newFriend = () => {
-    window.localStorage.setItem("newPosts", JSON.stringify(postsArrs2));
+let allPosts = [];
+const newFriend = (index) => {
+    for (let x in usersArrs2[index].posts) {
+        allPosts.push(usersArrs2[index].posts[x]);
+    }
+};
+const home_handler = () => {
+    window.localStorage.setItem("allPosts", JSON.stringify(allPosts));
 };

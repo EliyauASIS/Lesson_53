@@ -46,6 +46,8 @@ postsArrs = window.localStorage.getItem("userPosts")
 let postsArrs2 = JSON.parse(postsArrs)
 let postsArr2 = []
 
+
+
 let usernameProfile: any = 0
 usernameProfile = window.localStorage.getItem("userProfile")
 let usernameProfile2 = JSON.parse(usernameProfile)
@@ -64,9 +66,10 @@ for (let x in usersArrs2) {
            </br>`
         if (usersArrs2[x].username != usernameLogin1) {
             profileDiv.innerHTML +=
-                `<button id="friendRequestBtn" onclick="newFriend()" >Friend Request</button>
+                `<button id="friendRequestBtn" onclick="newFriend(${x})" >Friend Request</button>
            </br>`
         }
+
         break;
     }
 }
@@ -89,8 +92,20 @@ for (let x in postsArrs2) {
            </br>`
 }
 
-const newFriend=()=>{
-   window.localStorage.setItem("newPosts",JSON.stringify(postsArrs2))
+let allPosts: any = []
+
+const newFriend = (index: any) => {
+    for (let x in usersArrs2[index].posts) {
+
+        allPosts.push(usersArrs2[index].posts[x])
+    }
+}
+
+const home_handler = () => {
+
+    window.localStorage.setItem("allPosts", JSON.stringify(allPosts))
+
+
 }
 
 
