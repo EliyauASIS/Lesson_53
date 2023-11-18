@@ -8,7 +8,7 @@ body{
     top: 0;
     left: 0;
     height: 10vh;
-    width: 200vh;
+    width: 100%;
     z-index: 5;
 }
 #titleUpload{
@@ -43,8 +43,7 @@ body{
     align-items: center;
     width: 50vh;
     text-align: center;
-    margin-left: 135vh;
-    height: 40vh;
+    height: 50vh;
     border-radius: 1vh;
     color: white;
 }
@@ -84,9 +83,9 @@ body{
 }
 #shareNewPost{
     width: 20vh;
-    height: 3vh;
+    height: 5vh;
     text-align: center;
-    font-size: 150%;
+    font-size: 2.5vh;
     color: white;
     margin-top: 2vh;
     background-color: #4267B2;

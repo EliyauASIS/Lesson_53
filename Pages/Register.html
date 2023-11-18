@@ -4,43 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+Kawi&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../Styles/Register.css">
     <title>Register</title>
 </head>
 
 <body>
+    <div id="navigationBar"> 
+        <h1 id="profileBtn">Insta-Book</h1>
+        <div  class="btndiv">
+            <a href="../Pages/Login.html"><button id="signin">Sign In</button>
+            </a>
+            <p id="registered">If you have an account just</p>
+        </div>
+    </div>
     <div class="main-container">
     <div id="container">
         <div>
-            <div><label for="firstName">FirstName</label></div>
-            <div><input type="text" id="firstName"  placeholder="firstName"></div>
+            <div><label for="firstName">First Name:</label></div>
+            <div><input type="text" id="firstName"  placeholder="First Name"></div>
 
 
-            <div><label for="lastName">lastName</label></div>
-            <div><input type="text" id="lastName"  placeholder="lastName"></div>
+            <div><label for="lastName">Last Name:</label></div>
+            <div><input type="text" id="lastName"  placeholder="Last Name"></div>
 
-            <div><label for="username">Username</label></div>
-            <div><input type="text" id="username"  placeholder="username"></div>
+            <div><label for="username">Username:</label></div>
+            <div><input type="text" id="username"  placeholder="Username"></div>
 
-            <div><label for="age">age</label></div>
-            <div><input type="text" id="age"  placeholder="age"></div>
+            <div><label for="age">Age:</label></div>
+            <div><input type="text" id="age"  placeholder="Age"></div>
            
 
             <div></div><label for="email">Email</label>
             <div><input type="email" id="email" placeholder="email@email.com"></div>
 
             <div><label for="password">Password</label></div>
-            <div><input type="password" id="password" placeholder=""></div>
+            <div><input type="password" id="password" placeholder="********"></div>
 
         </div>
         <div class="btndiv">
             <!-- <button id="logbtn" onclick="addUserfunc()">Sign Up</button> -->
             <button id="logbtn" onclick="addUserfunc(firstName.value,lastName.value,username.value,age.value,email.value,password.value)">Sign Up</button>
         </div> 
-        <div class="btndiv">
-            <a href="../Pages/Login.html"><button id="signin">Sign In</button>
-            </a>
-        </div>  
+          
         
     </div>
     </div>

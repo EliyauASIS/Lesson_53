@@ -1,12 +1,31 @@
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Noto Sans Kawi', sans-serif;
     margin: 0;
-    background: rgb(225, 134, 207);
-    background: linear-gradient(rgb(68, 3, 48) 0%, rgb(178, 46, 178) 100%);
+    background-color: #6882b8;
+
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+#profileBtn {
+    float: left;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vh;
+    margin-left: 1vh;
+    margin-top: 3vh;
+}
 
+#navigationBar {
+    background-color: #4267B2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width:100%;
+    z-index: 5;
+    font-size: 1.6vh;
+    color: white;
+}
 
 .main-container{ 
     height: 100vh;
@@ -21,6 +40,8 @@ body {
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.123);
     border-radius: 8px;
+    display: flex;
+    
 }
 
 label{
@@ -39,7 +60,7 @@ input{
     padding: 5px;
 }
 
-#logbtn{
+#logbtn1{
     margin-top: 15px;
     margin-left: 38%;
     width: 75px;
@@ -49,4 +70,8 @@ input{
     font-weight: 600;
     border: 1px solid rgba(255, 255, 255, 0.356);
     border-radius: 8px;
+}
+
+#logbtn1:hover{
+    background-color:  #4267B2;
 }

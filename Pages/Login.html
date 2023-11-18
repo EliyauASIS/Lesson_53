@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+Kawi&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../Styles/Login.css">
-    <title>login page</title>
+    <title>Log In-Page</title>
 </head>
 <body>
+    <div id="navigationBar"> 
+        <h1 id="profileBtn">Insta-Book</h1>
+    </div>
     <div class="main-container">
     <div id="container">
          <div>
-            <div><label for="username">Username</label></div>
+            <div><label for="username">User-name:</label></div>
             <input type="text" placeholder="Username" id="username">
-            <div><label for="password">Password</label></div>
+            <div><label for="password">Password:</label></div>
             <input type="text" placeholder="Password" id="password">
-            
+            <div>
+                <button id="logbtn1" onclick="login()"><i id="spinner" class="fa fa-spinner fa-spin" style="display: none;"></i>Log In</button>
+               </div> 
         </div>
-        <div>
-         <button id="logbtn1" onclick="login()">Log In</button>
-        </div>   
+         
     </div>
     </div>
     <script src="../Scripts/Login.js"></script>

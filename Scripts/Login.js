@@ -15,18 +15,51 @@ xhr4.onload = function () {
     console.log(allUsersArr1);
 };
 xhr4.send();
-let username = document.getElementById("username");
-let password = document.getElementById("password");
+// function login() {
+//     for (let x in allUsersArr1) {
+//         if (username.value == allUsersArr1[x].username && password.value == allUsersArr1[x].password) {
+//             localStorage.setItem("loginuser", (allUsersArr1[x].username));
+//             localStorage.setItem("Usersarr", JSON.stringify(allUsersArr1));
+//             window.location.href = "../Pages/Home.html";
+//             flag = 1;
+//         }
+//     }
+//     if (flag == 0) {
+//         alert("Incorrect Data, Please try again!");
+//     }
+// }
 function login() {
-    for (let x in allUsersArr1) {
-        if (username.value == allUsersArr1[x].username && password.value == allUsersArr1[x].password) {
-            localStorage.setItem("loginuser", (allUsersArr1[x].username));
-            localStorage.setItem("Usersarr", JSON.stringify(allUsersArr1));
-            window.location.href = "../Pages/Home.html";
-            flag = 1;
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    showLoader();
+    setTimeout(() => {
+        let flag = false;
+        if (username.value.trim() === "" || password.value.trim() === "") {
+            alert("Please enter both Username and Password.");
         }
-    }
-    if (flag == 0) {
-        alert("Incorrect Data, Please try again!");
+        else {
+            for (let user of allUsersArr1) {
+                if (username.value === user.username && password.value === user.password) {
+                    localStorage.setItem("loginuser", user.username);
+                    localStorage.setItem("Usersarr", JSON.stringify(allUsersArr1));
+                    window.location.href = "../Pages/Home.html";
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag) {
+                alert("Incorrect username or password. Please try again!");
+            }
+        }
+    }, 3000);
+}
+function showLoader() {
+    const spinner = document.getElementById('spinner');
+    if (spinner) {
+        spinner.style.display = 'inline-block';
+        spinner.style.marginRight = '3px';
+        setTimeout(() => {
+            spinner.style.display = 'none';
+        }, 3000);
     }
 }

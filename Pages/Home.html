@@ -3,19 +3,20 @@
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+Kawi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+Kawi&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/Home.css">
-    <title>Document</title>
+    <title>Home-Page</title>
 </head>
 
 <body>
     <div id="container">
-        <div id="navigationBar"> 
-            <h1 id="profileBtn">Insta-book</h1>
+        <div id="navigationBar">
+            <h1 id="profileBtn">Insta-Book</h1>
             <img id="profilePicturePage" src="">
             <a href="../Pages/Profile.html" onclick="myProfile()" id="profileBtn">My Profile</a>
             <a href="../Pages/Login.html" id="logoutBtn">Log-Out</a>
@@ -23,16 +24,16 @@
         <div id="posts">
             <div id="createPostDiv">
                 <h1 id="titleUpload">Upload a Post</h1>
-                <label for="uploadImage"><img id="cameraPlus" src="../Media/camera-plus-solid-240.png" ></label></br>
+                <label for="uploadImage"><img id="cameraPlus" src="../Media/camera-plus-solid-240.png"></label></br>
                 <input type="file" id="uploadImage" accept="image/png, image/jpg">
                 <input type="text" id="newPostContent" placeholder="What are you thinking about...?"></br>
                 <button id="shareNewPost" onclick="addPost(newPostContent.value)">Share</button>
             </div>
             <div id="explorerPosts">
-           
+
             </div>
             <div id="ExplorerUsers">
-                
+
             </div>
         </div>
 
