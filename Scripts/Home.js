@@ -1,7 +1,7 @@
 "use strict";
+// localStorage.removeItem("Usersarr");
+// localStorage.removeItem("userPosts");
 // let usersArr: any = []
-let postsArr = [];
-let commentsArr = [];
 // let usernameLogin: any = JSON.parse(localStorage.getItem("user"));
 // usernameLogin = usernameLogin.username
 // let xhr2 = new XMLHttpRequest();
@@ -23,6 +23,8 @@ let commentsArr = [];
 //     console.log("Error");
 // }
 // xhr2.send()
+let postsArr = [];
+let commentsArr = [];
 let explorerPosts = document.getElementById("explorerPosts");
 const showExplorerPosts = () => {
     explorerPosts.innerHTML = "";
@@ -49,18 +51,21 @@ let usersArr2 = JSON.parse(usersArr);
 let usernameLogin = 0;
 usernameLogin = window.localStorage.getItem("loginuser");
 console.log(usernameLogin);
-console.log("fdsf");
 let myProfile1;
-for (let x in usersArr2) {
-    console.log(x);
-    if (usersArr2[x].username === usernameLogin) {
-        postsArr = usersArr2[x].posts;
-        window.localStorage.setItem("username", JSON.stringify(usernameLogin));
-        window.localStorage.setItem("usersArr", JSON.stringify(usersArr));
-        myProfile1 = usersArr2[x];
-        showExplorerPosts();
+const profile2 = () => {
+    console.log(usersArr2);
+    for (let x in usersArr2) {
+        if (usersArr2[x].username === usernameLogin) {
+            postsArr = usersArr2[x].posts;
+            window.localStorage.setItem("username", JSON.stringify(usernameLogin));
+            window.localStorage.setItem("usersArr", JSON.stringify(usersArr2));
+            myProfile1 = usersArr2[x];
+            showExplorerPosts();
+            break;
+        }
     }
-}
+};
+profile2();
 const like_handler = (index) => {
     if (postsArr[index].liked == false) {
         postsArr[index].postLikes += 1;
@@ -104,6 +109,12 @@ const addPost = (PostContent) => {
         };
         postsArr.unshift(newPostObj);
         console.log(postsArr);
+        for (let x in usersArr2) {
+            if (usernameLogin == usersArr2[x].username) {
+                usersArr2[x].posts = postsArr;
+                console.log(usersArr2[x].posts);
+            }
+        }
         showExplorerPosts();
     }
 };
@@ -113,7 +124,7 @@ function pepoleExplorer_handler() {
         if (usersArr2[x] != usernameLogin) {
             console.log(usersArr2[x]);
             pepoleExplorer.innerHTML += `
-            <a onclick="profile_handler(${usersArr2[x]})" href="../Pages/Profile.html">${usersArr2[x].username}</a>
+            <a onclick="profile_handler(${x})" href="../Pages/Profile.html">${usersArr2[x].username}</a></br>
             `;
         }
     }
@@ -123,6 +134,7 @@ const myProfile = () => {
     window.localStorage.setItem("userProfile", JSON.stringify(myProfile1));
     window.localStorage.setItem("userPosts", JSON.stringify(postsArr));
 };
-function profile_handler(user) {
-    window.localStorage.setItem("userProfile", JSON.stringify(user));
+function profile_handler(index) {
+    window.localStorage.setItem("userProfile", JSON.stringify(usersArr2[index].username));
+    window.localStorage.setItem("userPosts", JSON.stringify(usersArr2[index].posts));
 }

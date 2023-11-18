@@ -1,7 +1,7 @@
 
 body{
     font-family: 'Noto Sans Kawi', sans-serif;
-   
+    background-color: #6882b8;
 }
 #navigationBar {
     background-color: #4267B2;
@@ -55,8 +55,6 @@ body{
 .freindList{
     display: inline-block;
     margin-left: 30px;
-    width: 250px;
-    height: 550px;
     text-align: center;
 }
 
@@ -65,13 +63,10 @@ body{
     font-size: xx-large;
 }
 
-.content{
-   display: inline-block;
-    border: 1px solid blue;
+#content{
+    display: inline-block;
     border-radius: 5px;
     margin-top: 50px;
-    width: 250px;
-    height: 550px;
     text-align: center;
 }
 
@@ -116,13 +111,13 @@ body{
 .post{
     border: #4267B2 solid 0.2vh;
     align-items: center;
-    background-color: rgb(198, 198, 198);
+    background-color: #ffffff;
     margin-top: 3vh;
     width: 50vh;
     height: 68vh;
     border-radius: 1vh;
     position: relative;
-    margin-left: 75vh;
+    margin-left: 18vh;
 }
 #profilePicturePage{
     width: 5vh;
@@ -194,4 +189,9 @@ body{
     background-color: #0051ff;
     width: 50vh;
     height: 50vh;
+}
+#friendRequestBtn{
+    width: 10vh;
+    height: 5vh;
+    margin-top: -10%;
 }

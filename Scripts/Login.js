@@ -10,8 +10,8 @@ xhr4.onload = function () {
     let data = JSON.parse(this.responseText);
     let usersArr = data.users;
     allUsersArr1.push(...usersArr);
-    let newUser = window.localStorage.getItem("newUser");
-    allUsersArr1.push(JSON.parse(newUser));
+    // let newUser: any = window.localStorage.getItem("newUser");
+    // allUsersArr1.push(JSON.parse(newUser));
     console.log(allUsersArr1);
 };
 xhr4.send();

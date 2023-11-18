@@ -44,20 +44,17 @@ let usersArrs2 = JSON.parse(usersArrs)
 let postsArrs: any = 0
 postsArrs = window.localStorage.getItem("userPosts")
 let postsArrs2 = JSON.parse(postsArrs)
-
-
-
 let postsArr2 = []
 
 let usernameProfile: any = 0
-usernameProfile = window.localStorage.getItem("username")
+usernameProfile = window.localStorage.getItem("userProfile")
 let usernameProfile2 = JSON.parse(usernameProfile)
 
 let log1 = document.getElementById("User_Info") as HTMLDivElement
 
 for (let x in usersArrs2) {
     log1.innerHTML = ""
-    if (usersArrs2[x].username == usernameLogin1) {
+    if (usersArrs2[x].username == usernameProfile2) {
         let profileDiv = document.createElement("div") as HTMLDivElement
         profileDiv.className = "profileUser"
         log1.appendChild(profileDiv)
@@ -67,7 +64,7 @@ for (let x in usersArrs2) {
            </br>`
         if (usersArrs2[x].username != usernameLogin1) {
             profileDiv.innerHTML +=
-                `<button class="friendRequestBtn">Friend Request</button>
+                `<button id="friendRequestBtn" onclick="newFriend()" >Friend Request</button>
            </br>`
         }
         break;
@@ -75,12 +72,13 @@ for (let x in usersArrs2) {
 }
 
 let Posts = document.getElementById("content") as HTMLDivElement
-    for (let x in postsArrs2) {
-        let postDiv = document.createElement("div") as HTMLDivElement
-        postDiv.className = "post"
-        Posts.appendChild(postDiv)
-        postDiv.innerHTML +=
-            `<img class="profilePicture" src="${postsArrs2[x].userProfile}" alt="" srcset="">
+
+for (let x in postsArrs2) {
+    let postDiv = document.createElement("div") as HTMLDivElement
+    postDiv.className = "post"
+    Posts.appendChild(postDiv)
+    postDiv.innerHTML +=
+        `<img class="profilePicture" src="${postsArrs2[x].userProfile}" alt="" srcset="">
             <span class="postCreatorName">${postsArrs2[x].postCreator}</span>
             <span class="creationPost">${postsArrs2[x].creationTime}</span>
             <img class=postImage src="${postsArrs2[x].postImage}"></br>
@@ -89,6 +87,10 @@ let Posts = document.getElementById("content") as HTMLDivElement
             <span class="likes">${postsArrs2[x].postLikes} Likes</span></br>
             <span class="itemContent"> <span class="postCreatorNameStatus">${postsArrs2[x].postCreator}: </span> ${postsArrs2[x].postContent}</span>
            </br>`
-    }
+}
+
+const newFriend=()=>{
+   window.localStorage.setItem("newPosts",JSON.stringify(postsArrs2))
+}
 
 
