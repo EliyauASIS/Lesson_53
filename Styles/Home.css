@@ -98,7 +98,7 @@ body{
 .post{
     border: #4267B2 solid 0.2vh;
     align-items: center;
-    background-color: rgb(198, 198, 198);
+    background-color: #ffffff;
     margin-top: 3vh;
     width: 50vh;
     height: 68vh;
@@ -176,4 +176,13 @@ body{
     background-color: #0051ff;
     width: 50vh;
     height: 50vh;
+}
+#ExplorerUsers{
+    width:15vh;
+    height: 15vh;
+    background-color: #ffffff;
+    text-align: center;
+z-index: 10;
+margin-top: -250vh;
+margin-left: 20%;
 }
