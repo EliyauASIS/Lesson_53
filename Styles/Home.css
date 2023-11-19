@@ -203,12 +203,41 @@ body {
     height: 30vh;
     background-color: #ffffff;
     text-align: center;
-    margin-left: 80%;
     border-radius: 2vh;
     position: absolute;
-    margin-top: -130%;
+    top: 20vh;
+    left: 30vh;
+    
 }
 #otherFriends{
     text-decoration: none;
-    color: 0051ff;
+    color: #4267B2;
 }
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+      font-size:smaller;
+    }
+    .post{
+        margin-left: 5%;
+        width: 40vh;
+        height: 58vh;
+    }
+    .postImage{
+        height: 25vh;
+        width: 25vh;
+        text-align: center; 
+    }
+    #createPostDiv {
+        margin-left: 5%;
+        width: 40vh;
+        height: 58vh;
+    }
+    #ExplorerUsers{
+        margin-top: 5%;
+        align-items: center;
+        top: 5;
+        left: 0;
+        
+    }
+  }
