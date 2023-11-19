@@ -82,6 +82,7 @@ const profile2 = () => {
             // allPosts3 = usersArr2[x].posts;
             window.localStorage.setItem("username", JSON.stringify(usernameLogin))
             window.localStorage.setItem("usersArr", JSON.stringify(usersArr2))
+            allPosts3 = usersArr2[x].posts
             myProfile1 = usersArr2[x]
             showExplorerPosts();
             break;
@@ -140,7 +141,7 @@ const addPost = (PostContent: any) => {
         for (let x in usersArr2) {
             if (usernameLogin == usersArr2[x].username) {
                 usersArr2[x].posts = allPosts3
-              
+
             }
         }
         showExplorerPosts();
@@ -152,9 +153,10 @@ let pepoleExplorer = document.getElementById("ExplorerUsers") as HTMLDivElement
 
 function pepoleExplorer_handler() {
     for (let x in usersArr2) {
-        if (usersArr2[x] != usernameLogin) {
-            pepoleExplorer.innerHTML += `
-            <a onclick="profile_handler(${x})" href="../Pages/Profile.html">${usersArr2[x].username}</a></br>
+        if (usersArr2[x].username != usernameLogin) {
+            pepoleExplorer.innerHTML +=
+                `<img class="profilePicture" src="${usersArr2[x].userProfile}"></br>
+             <a id="otherFriends" onclick="profile_handler(${x})" href="../Pages/Profile.html">${usersArr2[x].username}</a>
             `
         }
     }
@@ -165,8 +167,14 @@ pepoleExplorer_handler()
 
 
 const myProfile = () => {
-    window.localStorage.setItem("userProfile", JSON.stringify(myProfile1))
-    window.localStorage.setItem("userPosts", JSON.stringify(postsArr))
+    for (let x in usersArr2) {
+        if (usersArr2[x].username == usernameLogin) {
+            window.localStorage.setItem("userProfile", JSON.stringify(usersArr2[x].username))
+            window.localStorage.setItem("userPosts", JSON.stringify(usersArr2[x].posts))
+        }
+
+    }
+
 }
 
 function profile_handler(index: any) {

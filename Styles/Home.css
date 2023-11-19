@@ -1,7 +1,8 @@
-body{
+body {
     font-family: 'Noto Sans Kawi', sans-serif;
     background-color: #6882b8;
 }
+
 #navigationBar {
     background-color: #4267B2;
     position: fixed;
@@ -11,10 +12,12 @@ body{
     width: 100%;
     z-index: 5;
 }
-#titleUpload{
+
+#titleUpload {
     color: #4267B2;
     font-size: 3vh;
 }
+
 #profileBtn {
     float: left;
     color: white;
@@ -32,12 +35,14 @@ body{
     margin-right: 5vh;
     margin-top: 3vh;
 }
-#posts{
-   align-items: center;
+
+#posts {
+    align-items: center;
 }
 
 #createPostDiv {
     margin-top: 12vh;
+    margin-left: 75vh;
     border: 2px solid #4267B2;
     background-color: #ffffff;
     align-items: center;
@@ -46,9 +51,10 @@ body{
     height: 50vh;
     border-radius: 1vh;
     color: white;
+
 }
 
-#uploadImage{
+#uploadImage {
     margin-top: 2vh;
     font-size: large;
     width: 20vh;
@@ -57,7 +63,7 @@ body{
     display: none;
 }
 
-#cameraPlus{
+#cameraPlus {
     height: 15vh;
     width: 15vh;
     color: #0051ff;
@@ -65,7 +71,7 @@ body{
 
 #newPostContent {
     width: 30vh;
-    height: 4vh; 
+    height: 4vh;
     margin-top: 2vh;
     margin-bottom: 1vh;
     border-radius: 1vh;
@@ -73,7 +79,7 @@ body{
     text-align: center;
 }
 
-#clearNewPostContent{
+#clearNewPostContent {
     width: 10vh;
     height: 3vh;
     float: left;
@@ -81,7 +87,8 @@ body{
     margin-left: 1vh;
     font-size: 150%;
 }
-#shareNewPost{
+
+#shareNewPost {
     width: 20vh;
     height: 5vh;
     text-align: center;
@@ -91,10 +98,12 @@ body{
     background-color: #4267B2;
     border-radius: 1vh;
 }
-#explorerPosts{
+
+#explorerPosts {
     text-align: center;
 }
-.post{
+
+.post {
     border: #4267B2 solid 0.2vh;
     align-items: center;
     background-color: #ffffff;
@@ -105,7 +114,8 @@ body{
     position: relative;
     margin-left: 75vh;
 }
-#profilePicturePage{
+
+#profilePicturePage {
     width: 5vh;
     height: 5vh;
     border-radius: 20vh;
@@ -113,7 +123,8 @@ body{
     margin-left: 5vh;
     float: left;
 }
-.profilePicture{
+
+.profilePicture {
     width: 5vh;
     height: 5vh;
     border-radius: 20vh;
@@ -121,67 +132,83 @@ body{
     margin-left: 5vh;
     float: left;
 }
-.postCreatorName{
+
+.postCreatorName {
     margin-left: 1vh;
     margin-top: 3vh;
     font-size: 2vh;
     font-weight: bold;
     float: left;
 }
-.postCreatorNameStatus{
+
+.postCreatorNameStatus {
     margin-right: 1.5vh;
     font-size: 1.5vh;
     font-weight: bold;
     margin-left: -10vh;
 }
-.postImage{
+
+.postImage {
     margin-top: 1vh;
     height: 48vh;
     width: 48vh;
 }
-.creationPost{
+
+.creationPost {
     margin-top: 4.5vh;
     float: right;
     margin-right: 6vh;
     font-size: 1.5vh;
 }
-.itemContent{
+
+.itemContent {
     float: left;
     margin-top: 2vh;
 }
-.likeBtn{
-   display: none;
+
+.likeBtn {
+    display: none;
 }
-.likeLabel{
+
+.likeLabel {
     font-size: 2.5vh;
     float: left;
     margin-left: 3vh;
     color: red;
 }
-.likes{
+
+.likes {
     font-size: 1.5vh;
     float: left;
     margin-left: 1vh;
     margin-top: 0.7vh;
 }
-.comment{
+
+.comment {
     align-items: center;
     background-color: white;
     width: 49vh;
     height: 7vh;
     text-align: center;
 }
-#explorerUsers{
+
+#explorerUsers {
     background-color: #0051ff;
     width: 50vh;
     height: 50vh;
 }
-#ExplorerUsers{
-    width:15vh;
-    height: 15vh;
+
+#ExplorerUsers {
+    width: 15vh;
+    height: 30vh;
     background-color: #ffffff;
     text-align: center;
-z-index: 10;
-margin-top: -250vh;
-margin-left: 20%;
+    margin-left: 80%;
+    border-radius: 2vh;
+    position: absolute;
+    margin-top: -130%;
+}
+#otherFriends{
+    text-decoration: none;
+    color: 0051ff;
 }

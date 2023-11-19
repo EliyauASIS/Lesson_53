@@ -16,10 +16,9 @@
                     "postNumber": 1,
                     "creationTime": "1 Hour Ago",
                     "postImage": "../Media/picture1.jpg",
-                    "postContent": "You only live once, but if you do it right, once is enough",
+                    "postContent": "You only live once, but if you do it right",
                     "postLikes": 457,
-                    "liked": false,
-                    "postComments": []
+                    "liked": false
                 },
                 {
                     "userProfile": "../Media/eliyahu_profile.png",
@@ -29,8 +28,7 @@
                     "postImage": "../Media/picture2.jpg",
                     "postContent": "In a world where you can be anything, be kind",
                     "postLikes": 577,
-                    "liked": false,
-                    "postComments": []
+                    "liked": false
                 },
                 {
                     "userProfile": "../Media/eliyahu_profile.png",
@@ -40,8 +38,7 @@
                     "postImage": "../Media/picture3.jpg",
                     "postContent": "Live, laugh, like my photo",
                     "postLikes": 1654,
-                    "liked": false,
-                    "postComments": []
+                    "liked": false
                 }
             ],
             "friends": {
@@ -64,10 +61,9 @@
                     "postNumber": 1,
                     "creationTime": "1 Hour Ago",
                     "postImage": "../Media/picture1.jpg",
-                    "postContent": "You only live once, but if you do it right, once is enough",
+                    "postContent": "You only live once, but if you do it right",
                     "postLikes": 457,
-                    "liked": false,
-                    "postComments": []
+                    "liked": false
                 },
                 {
                     "userProfile": "../Media/sagee_profile.png",
@@ -77,8 +73,7 @@
                     "postImage": "../Media/picture2.jpg",
                     "postContent": "In a world where you can be anything, be kind",
                     "postLikes": 577,
-                    "liked": false,
-                    "postComments": []
+                    "liked": false
                 },
                 {
                     "userProfile": "../Media/sagee_profile.png",
@@ -88,8 +83,7 @@
                     "postImage": "../Media/picture3.jpg",
                     "postContent": "Live, laugh, like my photo",
                     "postLikes": 1654,
-                    "liked": false,
-                    "postComments": []
+                    "liked": false
                 }
             ],
             "friends": [
@@ -114,10 +108,9 @@
                     "postNumber": 1,
                     "creationTime": "1 Hour Ago",
                     "postImage": "../Media/picture1.jpg",
-                    "postContent": "You only live once, but if you do it right, once is enough",
+                    "postContent": "You only live once, but if you do it right",
                     "postLikes": 457,
-                    "liked": false,
-                    "postComments": []
+                    "liked": false
                 },
                 {
                     "userProfile": "../Media/shiran_profile.png",
@@ -127,8 +120,7 @@
                     "postImage": "../Media/picture2.jpg",
                     "postContent": "In a world where you can be anything, be kind",
                     "postLikes": 577,
-                    "liked": false,
-                    "postComments": []
+                    "liked": false
                 },
                 {
                     "userProfile": "../Media/shiran_profile.png",
@@ -138,8 +130,7 @@
                     "postImage": "../Media/picture3.jpg",
                     "postContent": "Live, laugh, like my photo",
                     "postLikes": 1654,
-                    "liked": false,
-                    "postComments": []
+                    "liked": false
                 }
             ],
             "friends": [

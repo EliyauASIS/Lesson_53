@@ -66,10 +66,9 @@ for (let x in usersArrs2) {
            </br>`
         if (usersArrs2[x].username != usernameLogin1) {
             profileDiv.innerHTML +=
-                `<button id="friendRequestBtn" onclick="newFriend(${x})" >Friend Request</button>
+            `<button id="friendRequestBtn${x}" class="friendRequestBtn" onclick="newFriend()">Friend Request</button>
            </br>`
         }
-
         break;
     }
 }
@@ -93,19 +92,26 @@ for (let x in postsArrs2) {
 }
 
 let allPosts: any = []
+let newposts:any = []
 
-const newFriend = (index: any) => {
-    for (let x in usersArrs2[index].posts) {
-
-        allPosts.push(usersArrs2[index].posts[x])
+const newFriend = () => {
+    for (let t in usersArrs2) {
+        if (usersArrs2[t].username == usernameLogin1) {
+            for(let x in usersArrs2[t].posts){
+                newposts.push(usersArrs2[t].posts[x])
+            }
+            for(let y in postsArrs2){
+                newposts.push(postsArrs2[y])
+            }
+            usersArrs2[t].posts = newposts
+            console.log( usersArrs2[t].posts);
+        }
     }
+
 }
 
 const home_handler = () => {
-
-    window.localStorage.setItem("allPosts", JSON.stringify(allPosts))
-
-
+    window.localStorage.setItem("Usersarr", JSON.stringify(usersArrs2))
 }
 
 
